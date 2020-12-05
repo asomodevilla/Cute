@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Ventas</title>
+    <link rel="stylesheet" href="hojaEstilo.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1>Paws Hotel</h1>
+
+        <p>
+            <a href="Negocio.html" title="" Inicio>Inicio</a></li>
+        </p>
+    </div>
+    <hr />
+
+    <div class="col-12 col-s-12 row" >
+        <br><br>
+
+        <table name="tablacute" id="tablacute" border="1">
+            <tr>
+                <th colspan="7">Ventas</th>
+            </tr>
+            <tr>
+                <th>ID Venta</th>
+                <th>Nombre Vendedor</th>
+                <th>Sub Total</th>
+                <th>Impuesto</th>
+                <th>Total</th>
+                <th>Agregar Productos</th>
+                <th>Eliminar Venta</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Robert Plant</td>
+                <td>10000</td>
+                <td>1000</td>
+                <td>11000</td>
+                <td>
+                    <form action="agregarventa.html">
+                        <input class="btn" type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button class="btn" onclick="eliminarventa();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jimmy Page</td>
+                <td>30000</td>
+                <td>3000</td>
+                <td>31000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input class="btn" type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button class="btn" onclick="eliminarventa();">Eliminar Venta</button>
+                </td>
+               
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Robert Plant</td>
+                <td>20000</td>
+                <td>2000</td>
+                <td>21000</td>
+
+                <td>
+                    <form action="agregarventa.html">
+                        <input class="btn" type="submit" value="Agregar Venta" />
+                </td>
+                </form>
+
+                <td>
+                    <button class="btn" onclick="eliminarventa();">Eliminar Venta</button>
+                </td>
+
+            </tr>
+
+
+        </table>
+ 
+    </div>
+    <script>
+
+        function eliminarventa() {
+
+        var mensaje = confirm("¿Desea Eliminar Una Venta?")
+
+        if (mensaje) {
+        alert("Venta Eliminada");
+        }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

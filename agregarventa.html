@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de ventas</title>
+    <link rel="stylesheet" href="hojaEstilo.css" />
+    <script>
+        function validar() {
+
+            var errores = "";
+
+            var id = document.getElementById("txtid").value;
+            var vendedor = document.getElementById("txtnomvendedor").value;
+            var cantidad = document.getElementById("txtcantidad").value;
+
+            if (id == null || vendedor == null || cantidad == null || id.length == 0
+                || vendedor.length == 0 || cantidad.length == 0) {
+                errores += "Alguno de los campos no tiene datos<br/>";
+            }
+
+            if (isNaN(id)) {
+                errores += "El identificador no es un número<br/>";
+            }
+            else {
+                var idnum = parseInt(id);
+                if (idnum <= 0 || idnum > 1000) {
+                    errores += "El identificador no está dentro del rango esperado<br/>";
+                }
+            }
+
+            if (vendedor.length > 50) {
+                errores += "El nombre del vendedor tiene más de 50 caracteres<br/>";
+            }
+
+            if (isNaN(cantidad)) {
+                errores += "La cantidad no es un número<br/>";
+            }
+            else {
+                var cantidadnum = parseInt(cantidad);
+                if (cantidadnum <= 0 || cantidadnum > 1000) {
+                    errores += "La cantidad de artículos no está dentro del rango esperado<br/>";
+                }
+            }
+
+            if (errores == null || errores == "" || errores.length == 0) {
+                errores = "Venta agregada, Muchas gracias ";
+            }
+
+            var divmensaje = document.getElementById("mensaje");
+            divmensaje.innerHTML = errores;
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Paws Hotel</h1>
+        <p>
+            <a href="Negocio.html" title="" Inicio>Inicio</a></li>
+        </p>
+        <hr/>
+    </div>
+  
+    <div clas="col-12 col-s-12 sec2">
+
+
+        <h3>Agregar Venta</h3>
+        <br>
+        <form>
+            <p>
+            <h4>ID de venta:</h4>
+            <input type="text" name="txtid" id="txtid"><br><br>
+
+            <h4> Nombre de vendedor:</h4>
+            <input type="text" name="txtnomvendedor" id="txtnomvendedor"><br><br>
+
+            <h4> Cantidad de artículos:</h4>
+            <input type="text" name="txtcantidad" id="txtcantidad"><br><br>
+
+
+            <input type="button" onclick="validar();" class="btn" name="btnprocesar" id="btnprocesar" value="Validar formulario">
+            <input class="btn" type="reset" value="Limpiar Formulario" />
+
+            </p>
+        </form>
+
+        <br>
+        <div id="mensaje"></div>
+
+    </div>
+</body>
+
+</html>

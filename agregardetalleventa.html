@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle venta</title>
+    <link rel="stylesheet" href="hojaEstilo.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function detalleventa() {
+            var productos = document.getElementById("producto").value;
+            var cantidad = parseInt(document.getElementById("cantidad").value);
+            var ventas = document.getElementById("venta").value;
+            if (productos == "producto") {
+                alert("Seleccione un producto")
+            } else {
+                if (productos == "producto") {
+                    alert("Seleccione un producto")
+                } else {
+                    if (cantidad < 1 || cantidad > 1001) {
+                        alert("Ingrese una cantidad valida")
+                    } else {
+
+                        document.getElementById("demo").innerHTML += "<li>" + ventas + productos + " / Cantidad de articulos = " + cantidad + "</li>";
+
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Paws Hotel</h1>
+    </div>
+
+    <p>
+        <a href="Negocio.html" title="" Inicio>Inicio</a></li>
+    </p>
+    <hr />
+    <div class="col-12 col-s-12 sec2">
+ 
+        <h3>Agregar detalle venta</h3>
+        <form name=name="form2" id="lista" onsubmit="return agventa()">
+
+            <label for="no">Venta</label><br>
+            <select name="venta" id="venta">
+                <option value="venta">-</option>
+                <option value="001 / ">001</option>
+                <option value="002 / ">002</option>
+                <option value="003 / ">003</option>
+                <option value="004 / ">004</option>
+                <option value="005 / ">005</option>
+                <option value="006 / ">006</option>
+            </select><br>
+            <br>
+            <label for="no">Producto</label><br>
+            <select name="producto" id="producto">
+                <option value="producto">-</option>
+                <option value="Hospedaje1">Hospedaje diario</option>
+                <option value="Hospedaje2">Hospedaje Semanal</option>
+                <option value="Peluqueria1">Peluquería Canina S</option>
+                <option value="Peluqueria2">Peluquería Canina M</option>
+                <option value="Peluqueria">Peluquería Canina L</option>
+            </select><br>
+            <br>
+            <label for="cant">Cantidad</label><br>
+            <input type="number" name="cantidad" id="cantidad" placeholder="N° de articulos"><br>
+            <br>
+            <input type="button" onclick="detalleventa();" value="Agregar">
+            <input type="button" name="Submit" value="Limpiar" onClick="location.reload()"><br>
+            <br>
+        </form>
+
+
+    </Div>
+            <ul id="demo">
+
+
+            </ul>
+
+</body>
+
+</html>

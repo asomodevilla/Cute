@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ingreso de usuarios</title>
+    <link rel="stylesheet" href="hojaEstilo.css" />
+    <SCRIPT language=JavaScript>
+        function go() {
+
+
+            if (document.form.password.value == '1234' && document.form.login.value == 'admin') {
+                document.form.submit();
+            }
+            else {
+                alert("Por favor ingrese, nombre de usuario y contraseña correctos.");
+            }
+        }    
+    </SCRIPT>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Paws Hotel</h1>
+        <p>
+            <a href="Negocio.html" title="" Inicio>Inicio</a>
+        </p>
+        <hr/>
+    </div>
+  
+
+    <div class="col-12 col-s-12 row">
+
+        <FORM name=form action="Negocio.html">
+
+
+            <P>Usuario: <br> <INPUT type=text name=login>
+
+
+            <P>Contraseña: <br> <INPUT type=password name=password>
+                <br><br>
+                <INPUT onclick=go() class="btn" type=button value=Ingresar>
+
+    </div>
+    </FORM>
+
+
+    <br>
+    <div class="tableSec2">
+        <h3>Registrese con nosotros</h3>
+        <p>
+            <a href="agregarcliente.html">Registro de clientes </a></li>
+        </p>
+    </div>
+
+
+
+</body>
+
+</html>
